@@ -5,4 +5,7 @@ mardi : point avec pringent -> validation de nos idées -> redirection du projet
 	problématique du chiffrement, de l'échelle, de l'évaluation etc
 	comment relier les chiffres entres eux ?
 	comment estimer la répercussion sur les indicateurs ?
+mercredi : configuration projet git
+	   creation projet qt
+	   brouillon interface ave qt designer
 
