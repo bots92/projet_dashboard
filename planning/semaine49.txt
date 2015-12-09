@@ -1,0 +1,8 @@
+lundi : mindmap
+mardi : point avec pringent -> validation de nos idées -> redirection du projet vers une forme de serious game
+	nécessité d'un dialogue avec les utilisateurs
+	questionnaire ? ok mais quelles questions ?
+	problématique du chiffrement, de l'échelle, de l'évaluation etc
+	comment relier les chiffres entres eux ?
+	comment estimer la répercussion sur les indicateurs ?
+
