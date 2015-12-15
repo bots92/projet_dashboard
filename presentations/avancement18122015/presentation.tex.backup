@@ -1,0 +1,86 @@
+\documentclass{beamer}
+
+\usepackage[francais]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{beamerthemesupelec}
+\usepackage{beamerouterthemesupelec}
+\usepackage{beamerfontthemesupelec}
+\usepackage{beamerinnerthemesupelec}
+\usepackage{beamercolorthemesupelec}
+
+\usetheme{supelec}
+\useoutertheme{supelec}
+\usefonttheme{supelec}
+\useinnertheme{supelec}
+\usecolortheme{supelec}
+
+\title[Avancement]{Avancement du projet de visualisation}
+\author{\textbf{Nicolas \textsc{Bostsarron} - Valentin \textsc{Jaouen}}}
+\institute{Centrale Supélec - Campus de Rennes}
+
+\AtBeginSection[] {
+  \begin{frame}
+    \frametitle{Plan}
+    \tableofcontents[currentsection]
+  \end{frame} 
+}
+
+\begin{document}
+
+  \begin{frame}
+    \titlepage
+  \end{frame}
+  
+  \begin{frame}
+    \frametitle{Plan}
+    \tableofcontents
+  \end{frame} 
+
+  \section{Présentation du projet}
+  \begin{frame}
+    \frametitle{Hypothèses}
+  \end{frame}
+  
+  \begin{frame}
+   \frametitle{Problématiques}
+  \end{frame}
+
+  
+  \begin{frame}
+    \frametitle{Réponses}
+  \end{frame}
+  
+  \section{Réalisations}
+  \begin{frame}
+   \frametitle{MindMap}
+  \end{frame}
+  
+  \begin{frame}
+   \frametitle{Modélisation}
+  \end{frame}
+  
+  \begin{frame}
+   \frametitle{Questionnaire}
+  \end{frame}
+
+  \section{Conclusion}
+  \begin{frame}
+   \frametitle{Ce qui a été fait} 
+  \end{frame}
+  
+  \begin{frame}
+   \frametitle{Ce qu'il reste à faire}
+  \end{frame}
+  
+  \begin{frame}
+   \frametitle{Ce qui est prévu}
+  \end{frame}
+
+  \begin{frame}
+    \begin{center}
+      Merci de votre attention
+    \end{center}
+  \end{frame}
+
+\end{document}

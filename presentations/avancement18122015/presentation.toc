@@ -1,0 +1,5 @@
+\beamer@endinputifotherversion {3.36pt}
+\select@language {french}
+\beamer@sectionintoc {1}{Pr\IeC {\'e}sentation du projet}{3}{0}{1}
+\beamer@sectionintoc {2}{R\IeC {\'e}alisations}{11}{0}{2}
+\beamer@sectionintoc {3}{Conclusion}{15}{0}{3}

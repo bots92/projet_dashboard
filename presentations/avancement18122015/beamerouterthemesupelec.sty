@@ -1,0 +1,127 @@
+%%(encoding:utf-8)
+%% author: Frédéric Boulanger, frederic.boulanger@supelec.fr
+%% copyright Supélec 2010
+%% v1.0: initial release
+%%
+\ProvidesPackage{beamerouterthemesupelec}[2010/04/13 v1.0 Beamer outer theme for Supelec]
+
+\mode <all>
+\RequirePackage{tikz}
+\pgfdeclareimage[width=10mm]{logosup}{beamerthemesupeleclogo}
+
+\mode<presentation>
+
+\setbeamercolor{frametitle}{parent=titlelike}
+\setbeamercolor*{author in head/foot}{parent=palette tertiary}
+\setbeamercolor*{title in head/foot}{parent=palette secondary}
+\setbeamercolor*{date in head/foot}{parent=palette primary}
+
+\setbeamercolor*{section in head/foot}{parent=palette tertiary}
+\setbeamercolor*{subsection in head/foot}{parent=palette primary}
+
+%\AtBeginDocument{
+%  {
+%    \usebeamerfont*{headline}
+%
+%    \usebeamercolor{normal text}
+%    \usebeamercolor{title in head/foot}
+%    \usebeamercolor{subsection in head/foot}
+%    \usebeamercolor{section in head/foot}
+%    \usebeamercolor{frametitle}
+%
+%    \pgfdeclareverticalshading{beamer@treeshade}{\the\paperwidth}{%
+%      color(0ex)=(normal text.bg);%
+%      color(1ex)=(subsection in head/foot.bg);%
+%      color(3.25ex)=(subsection in head/foot.bg);%
+%      color(4.25ex)=(section in head/foot.bg);%
+%      color(6.5ex)=(section in head/foot.bg);%
+%      color(7.5ex)=(title in head/foot.bg);%
+%      color(10.25ex)=(title in head/foot.bg)%
+%    }
+%    
+%    \pgfdeclareverticalshading{beamer@aboveframetitle}{\the\paperwidth}{%
+%      color(0ex)=(frametitle.bg);%
+%      color(1ex)=(frametitle.bg);%
+%      color(2ex)=(subsection in head/foot.bg)
+%    }
+%
+%    \pgfdeclareverticalshading{beamer@belowframetitle}{\the\paperwidth}{%
+%      color(0ex)=(normal text.bg);%
+%      color(1ex)=(frametitle.bg)
+%    }
+%  }
+%}
+  
+\defbeamertemplate*{footline}{infolines theme} {%
+  \leavevmode\hbox{%
+  \begin{tikzpicture}[x=1mm,y=1mm]
+    \path[fill=supelec-logoblue] (0,0) -- ++(0,4) 
+      -- ++(\linewidth+\beamer@rightmargin+\beamer@leftmargin-35mm,0)       -- ++(1,-1) -- ++(30,0) -- ++(1.5,-1.5) 
+      -- (\linewidth+\beamer@rightmargin+\beamer@leftmargin,1.5) -- ++(0,-1.5) -- cycle ;
+    \node[text centered] at (0.166667\paperwidth,2) {%
+      \usebeamercolor[fg]{title in head/foot}\usebeamerfont{title in head/foot}\beamer@shorttitle
+    } ;
+    \node[text centered] at (0.5\paperwidth,2) {%
+      \usebeamercolor[fg]{section in head/foot}\usebeamerfont{section in head/foot}\insertsectionhead
+    } ;
+    \node[text centered] at (0.833333\paperwidth,2) {%
+      \usebeamercolor[fg]{date in head/foot}\usebeamerfont{date in head/foot}%
+      \insertshortdate{}\hspace{2em}\insertframenumber{} / \inserttotalframenumber
+    } ;    
+  \end{tikzpicture}%
+  }%
+}
+
+
+\defbeamertemplate*{headline}{supelec} {%
+  \usebeamerfont{headline}%
+  \begin{tikzpicture}[x=1mm,y=1mm]
+    \path[fill=supelec-logoblue] (0,0) -- ++(0,-12) -- ++(3,0) -- ++(1,-2) -- ++(15,0) 
+                              -- ++(0.6,1.2) -- ++(10,0) -- ++(0.4,0.8) 
+                              -- (\textwidth,-12) -- (\textwidth,0) -- cycle ;
+    \path[fill=white]   (5.5,-12.5) rectangle (16.5,-1.5) ;
+    \node[anchor=south west,inner sep=0pt] at (6,-12) {\pgfuseimage{logosup}} ;
+    \node[
+      anchor=west,
+      text=white,
+      text width=2cm,
+      font=\usefont{T1}{phv}{b}{n}\fontsize{4}{6}\selectfont,
+    ] at (17,-5) {\'ECOLE\\[1ex]SUP\'ERIEURE\\[1ex]D'\'ELECTRICIT\'E} ;  \end{tikzpicture}
+}
+
+\defbeamertemplate*{frametitle}{supelec} {%
+  \nointerlineskip
+  \vspace*{-14mm}% annulation de l'espace vertical de l'en-tête
+  \hspace*{-\beamer@leftmargin}%
+  \noindent\begin{tikzpicture}[x=1mm,y=1mm]
+    \path (0,0) rectangle (\paperwidth,-12mm) ;
+    \node at (80,-6) {\parbox{9cm}{\centering
+      \usebeamerfont{frametitle}%
+      \usebeamercolor[fg]{frametitle}%
+      \insertframetitle
+      \ifx\insertframesubtitle\@empty
+      \else
+        \usebeamerfont{framesubtitle}%
+        \\%[-1.5ex]
+        \usebeamercolor[fg]{framesubtitle}%
+        \insertframesubtitle
+      \fi
+    }} ;
+  \end{tikzpicture}%
+  \hspace*{-\beamer@rightmargin}%
+}
+
+\defbeamertemplate*{sidebar right}{supelec} {%
+  \vfill
+  \llap{\usebeamertemplate***{navigation symbols}\hskip0.1cm}%
+  \vskip2pt%
+}
+
+\setbeamerfont{block title}{size={}}
+\setbeamerfont{institute}{size=\footnotesize}
+\setbeamersize{text margin left=1em,text margin right=1em}
+  
+\mode
+<all>
+
+\endinput

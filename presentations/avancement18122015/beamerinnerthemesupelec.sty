@@ -1,0 +1,133 @@
+%%(encoding:utf-8)
+%% author: Frédéric Boulanger, frederic.boulanger@supelec.fr
+%% copyright Supélec 2010
+%% v1.0: initial release
+%%
+%% Options:
+%%   rounded (default=true): use rounded rectangles for blocks and titles
+%%   shadow  (default=true): draw a shadow for rounded rectangles (requires 'rounded')
+%%
+\ProvidesPackage{beamerinnerthemesupelec}[2010/04/13 v1.0 Beamer inner theme for Supelec]
+
+\DeclareOptionBeamer{rounded}[true]{%
+  \def\beamer@themesupelec@rounded{#1}%
+}
+\DeclareOptionBeamer{shadow}[true]{%
+  \def\beamer@themesupelec@shadow{#1}%
+}
+\ExecuteOptionsBeamer{rounded}
+\ExecuteOptionsBeamer{shadow}
+\ProcessOptionsBeamer
+
+\defbeamertemplate*{section in toc}{supelec} {%
+  \leavevmode\leftskip=2ex%
+  \llap{%
+    \usebeamerfont*{section number projected}%
+    \usebeamercolor{section number projected}%
+    \begin{pgfpicture}{-1ex}{0ex}{1ex}{2ex}
+      \color{bg}
+      \pgfpathcircle{\pgfpoint{-0.02em}{.59ex}}{1.2ex}
+      \pgfusepath{fill}
+      \pgftext[base]{\color{fg}\inserttocsectionnumber}
+    \end{pgfpicture}\kern1.25ex%
+  }%
+  \inserttocsection\par
+}
+
+\defbeamertemplate*{subsection in toc}{supelec}{%
+  \leavevmode\leftskip=2em\inserttocsubsection\par
+}
+
+\defbeamertemplate*{subsubsection in toc}{supelec} {%
+  \leavevmode\normalsize
+  \usebeamerfont{subsection in toc}%
+  \leftskip=3em%
+  \usebeamerfont{subsubsection in toc}%
+  \inserttocsubsubsection\par
+}
+
+%%
+\def\beamer@themesupelec@listsettings{%
+  \global\itemsep=0pt%
+  \global\parsep=0pt%
+}
+
+\defbeamertemplate*{itemize item}{supelec}{%
+  \beamer@themesupelec@listsettings
+  \small\raise0.5pt\hbox{\textbullet}%
+}
+\defbeamertemplate*{itemize subitem}{supelec}{%
+  \beamer@themesupelec@listsettings
+  \footnotesize\raise0.5pt\hbox{\textbullet}%
+}
+\defbeamertemplate*{itemize subsubitem}{supelec}{%
+  \beamer@themesupelec@listsettings
+  \footnotesize\raise0.5pt\hbox{\textbullet}%
+}
+  
+\defbeamertemplate*{enumerate item}{supelec} {%
+  \beamer@themesupelec@listsettings
+  \usebeamerfont*{item projected}%
+  \usebeamercolor[bg]{item projected}%
+  \begin{pgfpicture}{-1ex}{0ex}{1ex}{2ex}
+    \pgfpathcircle{\pgfpoint{0pt}{.75ex}}{1.2ex}
+    \pgfusepath{fill}
+    \pgftext[base]{\color{fg}\insertenumlabel}
+  \end{pgfpicture}%
+}[action]{%
+  \setbeamerfont{item projected}{size=\scriptsize}%
+}
+
+\defbeamertemplate*{enumerate subitem}{supelec} {%
+  \beamer@themesupelec@listsettings
+  \usebeamerfont*{subitem projected}%
+  \usebeamercolor[bg]{subitem projected}%
+  \begin{pgfpicture}{-1ex}{0ex}{1ex}{2ex}
+    \pgfpathcircle{\pgfpoint{0pt}{.75ex}}{1.2ex}
+    \pgfusepath{fill}
+    \pgftext[base]{\color{fg}\insertsubenumlabel}
+  \end{pgfpicture}%
+}
+
+\defbeamertemplate*{enumerate subsubitem}{supelec} {%
+  \beamer@themesupelec@listsettings
+  \usebeamerfont*{subsubitem projected}%
+  \usebeamercolor[bg]{subsubitem projected}%
+  \begin{pgfpicture}{-1ex}{0ex}{1ex}{2ex}
+    \pgfpathcircle{\pgfpoint{0pt}{.75ex}}{1.2ex}
+    \pgfusepath{fill}
+    \pgftext[base]{\color{fg}\insertsubsubenumlabel}
+  \end{pgfpicture}%
+}
+
+\defbeamertemplate*{enumerate mini template}{supelec} {%
+  \beamer@themesupelec@listsettings
+  \usebeamerfont*{\beameritemnestingprefix item projected}%
+  \usebeamercolor[bg]{\beameritemnestingprefix item projected}%
+  \begin{pgfpicture}{-1ex}{0ex}{1ex}{2ex}
+    \pgfpathcircle{\pgfpoint{0pt}{.75ex}}{1.2ex}
+    \pgfusepath{fill}
+    \pgftext[base]{\color{fg}\insertenumlabel}
+  \end{pgfpicture}%
+}
+
+
+\mode<presentation>
+
+\setbeamertemplate{items}[supelec]
+\setbeamertemplate{sections/subsections in toc}[supelec]
+\def\beamer@themesupelec@tmp{true}
+\ifx\beamer@themesupelec@rounded\beamer@themesupelec@tmp
+  \setbeamertemplate{blocks}[rounded][shadow=\beamer@themesupelec@shadow]
+\else
+  \setbeamertemplate{blocks}[default]
+\fi
+\setbeamertemplate{title page}[default]%
+  [colsep=-4bp,rounded=\beamer@themesupelec@rounded,shadow=\beamer@themesupelec@shadow]
+\setbeamertemplate{part page}[default]%
+  [colsep=-4bp,rounded=\beamer@themesupelec@rounded,shadow=\beamer@themesupelec@shadow]
+
+\mode
+<all>
+
+\endinput

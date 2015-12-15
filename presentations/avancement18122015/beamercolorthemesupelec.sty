@@ -1,0 +1,62 @@
+%%(encoding:utf-8)
+%% author: Frédéric Boulanger, frederic.boulanger@supelec.fr
+%% copyright Supélec 2010
+%% v1.0: initial release
+%%
+%% Options:
+%%   Cecile (default=false): use orange for titles and "alert" elements
+%%
+\ProvidesPackage{beamercolorthemesupelec}[2010/04/13 v1.0 Beamer color theme for Supelec]
+
+\DeclareOptionBeamer{Cecile}[true]{%
+  \def\beamer@themesupelec@Cecile{#1}%
+}
+\ExecuteOptionsBeamer{Cecile=false}
+\ProcessOptionsBeamer
+
+\mode<presentation>
+\definecolor{supelec-logoblue}{cmyk}{1,0.78,0.10,0}
+\definecolor{supelec-darkblue}{cmyk}{1,0.74,0.32,0.19}
+\definecolor{supelec-deepblue}{cmyk}{0.96,0.65,0.25,0.09}
+\definecolor{supelec-blue}{cmyk}{0.91,0.54,0.15,0.02}
+\definecolor{supelec-lightblue}{cmyk}{0.85,0.45,0.09,0}
+\definecolor{supelec-red}{cmyk}{0.3,1,0.7,0.25}
+\definecolor{supelec-orange}{cmyk}{0,0.45,0.87,0}
+\setbeamercolor{structure}{fg=supelec-logoblue}
+\setbeamercolor{item projected}{bg=supelec-logoblue}
+%%
+\setbeamercolor*{palette primary}{use=structure,fg=white,bg=structure.fg}
+\setbeamercolor*{palette secondary}{use=structure,fg=white,bg=supelec-deepblue}
+\setbeamercolor*{palette tertiary}{use=structure,fg=white,bg=supelec-blue}
+\setbeamercolor*{palette quaternary}{fg=white,bg=black}
+%%
+\setbeamercolor*{sidebar}{use=structure,bg=structure.fg}
+\setbeamercolor*{palette sidebar primary}{use=structure,fg=supelec-blue}
+\setbeamercolor*{palette sidebar secondary}{fg=white}
+\setbeamercolor*{palette sidebar tertiary}{use=structure,fg=supelec-lightblue}
+\setbeamercolor*{palette sidebar quaternary}{fg=white}
+
+\def\beamer@themesupelec@tmp{true}
+\ifx\beamer@themesupelec@Cecile\beamer@themesupelec@tmp
+  \setbeamercolor*{titlelike}{parent=palette primary,fg=supelec-orange}
+  \setbeamercolor{alert}{fg=supelec-orange}
+  \setbeamercolor{alerted text}{fg=supelec-orange}
+\else
+  \setbeamercolor*{titlelike}{parent=palette primary}
+  \setbeamercolor{alert}{fg=supelec-red}
+  \setbeamercolor{alerted text}{fg=supelec-red}
+\fi
+
+\setbeamercolor*{separation line}{}
+\setbeamercolor*{fine separation line}{}
+%%
+\setbeamercolor*{block body}{}
+\setbeamercolor*{block body alerted}{}
+\setbeamercolor*{block body example}{}
+\setbeamercolor*{block title}{parent=structure}
+\setbeamercolor*{block title alerted}{parent=alerted text}
+\setbeamercolor*{block title example}{parent=example text}
+\mode
+<all>
+
+\endinput

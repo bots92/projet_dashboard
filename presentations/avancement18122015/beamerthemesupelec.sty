@@ -1,0 +1,63 @@
+%%(encoding:utf-8)
+%% author: Frédéric Boulanger, frederic.boulanger@supelec.fr
+%% copyright Supélec 2010
+%% v1.0: initial release
+%%
+%% Options:
+%%   Cecile (default=false): use orange for titles and "alert" elements
+%%   rounded (default=true): use rounded rectangles for blocks and titles
+%%   shadow  (default=true): draw a shadow for rounded rectangles (requires 'rounded')
+%%
+\ProvidesPackage{beamerthemesupelec}[2010/04/13 v1.0 Beamer theme for Supelec]
+
+\DeclareOptionBeamer{Cecile}[true]{%
+  \def\beamer@themesupelec@Cecile{#1}%
+}
+\DeclareOptionBeamer{rounded}[true]{%
+  \def\beamer@themesupelec@rounded{#1}%
+}
+\DeclareOptionBeamer{shadow}[true]{%
+  \def\beamer@themesupelec@shadow{#1}%
+}
+\ExecuteOptionsBeamer{Cecile=false}
+\ExecuteOptionsBeamer{rounded}
+\ExecuteOptionsBeamer{shadow}
+\ProcessOptionsBeamer
+
+\newcommand*{\mylistSettings}{%
+  \setlength{\itemsep}{0pt}%
+  \setlength{\parsep}{0pt}%
+}
+
+\newcount\beamer@themesupelec@seconds
+\newcount\beamer@themesupelec@minutes
+\newcount\beamer@themesupelec@hours
+\newcount\beamer@themesupelec@tmpcount
+
+\newcommand{\timestamp}{%
+  \the\year-%
+  \ifnum\the\month<10 0\fi\the\month-%
+  \ifnum\the\day<100\fi\the\day\space
+  \beamer@themesupelec@minutes=\time
+  \beamer@themesupelec@hours=\beamer@themesupelec@minutes
+  \divide\beamer@themesupelec@hours by 60
+  \beamer@themesupelec@tmpcount=\beamer@themesupelec@hours
+  \multiply\beamer@themesupelec@tmpcount by 60
+  \advance\beamer@themesupelec@minutes-\beamer@themesupelec@tmpcount
+  \the\beamer@themesupelec@hours:%
+  \ifnum\beamer@themesupelec@minutes<10 0\fi\the\beamer@themesupelec@minutes
+}
+
+\mode<presentation>
+
+\usecolortheme[Cecile=\beamer@themesupelec@Cecile]{supelec}
+\useoutertheme{supelec}
+\usefonttheme{supelec}
+\useinnertheme[rounded=\beamer@themesupelec@rounded,shadow=\beamer@themesupelec@shadow]{supelec}
+
+%\setbeamerfont{block title}{size={}}
+
+\mode
+<all>
+
+\endinput

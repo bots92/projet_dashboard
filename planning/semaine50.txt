@@ -1,0 +1,3 @@
+mardi 15/12 : etude modele uml (Modèle et Controleur)
+	      realisation des diapos d'avancement pour vendredi 18/12
+              arborescence necessaire pour le traitement des données
