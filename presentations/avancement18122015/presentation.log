@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2015.11.12)  15 DEC 2015 15:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2015.11.12)  16 DEC 2015 11:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1364,14 +1364,19 @@ LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <10> not available
 
 ] (./presentation.toc) [11
 
-] [12
+]
+<mindmap.jpg, id=347, 2057.6875pt x 1165.35374pt>
+File: mindmap.jpg Graphic file (type jpg)
+ <use mindmap.jpg>
+Package pdftex.def Info: mindmap.jpg used on input line 122.
+(pdftex.def)             Requested size: 308.6398pt x 174.79552pt.
+ [12
 
-] [13
+ <./mindmap.jpg>] [13
 
 ] [14
 
-] (./presentation.toc)
-[15
+] (./presentation.toc) [15
 
 ] [16
 
@@ -1391,20 +1396,21 @@ LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <10> not available
 \tf@snm=\write8
 \openout8 = `presentation.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 148.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 148.
- (./presentation.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 148.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 148.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 168.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 168.
+
+(./presentation.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 168.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 168.
 Package rerunfilecheck Info: File `presentation.out' has not changed.
 (rerunfilecheck)             Checksum: DB913E4B6347B4B1D2037557D63D3DCA;155.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 148.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 168.
  ) 
 Here is how much of TeX's memory you used:
- 21186 strings out of 493085
- 410039 string characters out of 6136916
+ 21192 strings out of 493085
+ 410117 string characters out of 6136916
  487727 words of memory out of 5000000
- 24115 multiletter control sequences out of 15000+600000
+ 24119 multiletter control sequences out of 15000+600000
  50062 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  59i,18n,66p,392b,852s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1412,10 +1418,10 @@ Here is how much of TeX's memory you used:
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts
 /type1/urw/helvetic/uhvr8a.pfb>
-Output written on presentation.pdf (19 pages, 76508 bytes).
+Output written on presentation.pdf (19 pages, 211794 bytes).
 PDF statistics:
- 583 PDF objects out of 1000 (max. 8388607)
+ 584 PDF objects out of 1000 (max. 8388607)
  541 compressed objects within 6 object streams
  42 named destinations out of 1000 (max. 500000)
- 96 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 101 words of extra memory for PDF output out of 10000 (max. 10000000)
 
