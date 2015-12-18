@@ -155,10 +155,10 @@ order=-1
 
 [item:presentation.tex]
 archive=true
-column=35
+column=31
 encoding=UTF-8
 highlight=LaTeX
-line=156
+line=137
 mode=LaTeX
 open=true
 order=0
@@ -174,7 +174,7 @@ open=false
 order=-1
 
 [view-settings,view=0,item:presentation.tex]
-CursorColumn=35
-CursorLine=156
+CursorColumn=31
+CursorLine=137
 JumpList=
-ViMarks=.,156,34,[,156,6,],156,34
+ViMarks=.,137,30,[,137,27,],137,30
